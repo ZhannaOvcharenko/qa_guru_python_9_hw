@@ -1,1 +1,1 @@
-# qa_guru_python_9_hw
+ДЗ по курсу автоматизации на Python QA_GURU

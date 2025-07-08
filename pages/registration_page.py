@@ -18,7 +18,7 @@ class RegistrationPage:
         self.state = browser.element('#react-select-3-input')
         self.city = browser.element('#react-select-4-input')
         self.submit = browser.element('#submit')
-        self.registered_user = browser.element('.table-responsive').all('td')
+        self.registered_user = browser.all('.table-responsive tbody tr td:nth-of-type(2)')
 
     def open(self):
         browser.open('/automation-practice-form')

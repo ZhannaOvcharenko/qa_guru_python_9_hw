@@ -1,5 +1,5 @@
 import os
-from selene import browser, have
+from selene import browser, have, be
 from data.users import User
 
 
@@ -74,7 +74,7 @@ class RegistrationPage:
         return self
 
     def choose_city(self, value):
-        self.city.type(value).press_enter()
+        self.city.should(be.visible).click().type(value).press_enter()
         return self
 
     def submit_form(self):

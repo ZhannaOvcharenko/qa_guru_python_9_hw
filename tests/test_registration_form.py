@@ -1,4 +1,3 @@
-from selene import browser, have
 from pages.registration_page import RegistrationPage
 
 
@@ -14,7 +13,7 @@ def test_registration_form():
         .fill_email('test.testov@gmail.com')
         .choose_gender('Male')
         .fill_phone_number('9839583958')
-        .fill_date_of_birth('8', 'July', '1996')
+        .fill_date_of_birth('08', 'July', '1996')
         .choose_subject('Computer Science')
         .choose_hoobies('Sports')
         .upload_picture('demoqa.jpg')
@@ -31,7 +30,7 @@ def test_registration_form():
         'test.testov@gmail.com',
         'Male',
         '9839583958',
-        '8 July,1996',
+        '08 July,1996',
         'Computer Science',
         'Sports',
         'demoqa.jpg',

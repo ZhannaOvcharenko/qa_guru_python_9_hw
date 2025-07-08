@@ -1,6 +1,7 @@
 import os
 from selene import browser, have
 
+
 class RegistrationPage:
 
     def __init__(self):
@@ -16,7 +17,7 @@ class RegistrationPage:
         self.state = browser.element('#react-select-3-input')
         self.city = browser.element('#react-select-4-input')
         self.submit = browser.element('#submit')
-        self.registered_user = browser.element('.table-responsive').all('td')
+        self.registered_user = browser.all('.table-responsive tbody tr td:nth-of-type(2)')
 
     def open(self):
         browser.open('/automation-practice-form')
@@ -81,7 +82,7 @@ class RegistrationPage:
 
     def should_registered_user_with(self, full_name, email, gender, phone, date_of_birth, subject, hobby, picture,
                                     address, state_and_city):
-        self.registered_user.even.should(
+        self.registered_user.should(
             have.exact_texts(
                 full_name,
                 email,

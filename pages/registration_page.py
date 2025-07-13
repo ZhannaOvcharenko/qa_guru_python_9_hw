@@ -102,7 +102,7 @@ class RegistrationPage:
         return self
 
     def should_registered_user_with(self, user: User):
-        self.registered_user.even.should(
+        self.registered_user.should(
             have.exact_texts(
                 f'{user.first_name} {user.last_name}',
                 f'{user.email}',

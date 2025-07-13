@@ -16,7 +16,7 @@ class Hobby(Enum):
 
 class State (Enum):
     NCR = "NCR"
-    UTTAR_PRADESH = "Utar Pradesh"
+    UTTAR_PRADESH = "Uttar Pradesh"
     HARYANA = "Haryana"
     RAJASTHAN = "Rajasthan"
 

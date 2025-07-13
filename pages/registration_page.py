@@ -70,11 +70,15 @@ class RegistrationPage:
         return self
 
     def choose_state(self, value):
-        self.state.type(value).press_enter()
+        browser.element('#state').click()
+        browser.element('#react-select-3-input').type(value)
+        browser.element('div[id^="react-select-3-option"]').should(have.exact_text(value)).click()
         return self
 
     def choose_city(self, value):
-        self.city.should(be.visible).click().type(value).press_enter()
+        browser.element('#city').click()
+        browser.element('#react-select-4-input').type(value)
+        browser.element('div[id^="react-select-4-option"]').should(have.exact_text(value)).click()
         return self
 
     def submit_form(self):

@@ -1,5 +1,5 @@
 import os
-from selene import browser, have, be
+from selene import browser, have, be, command
 from data.users import User
 
 
@@ -58,7 +58,7 @@ class RegistrationPage:
         return self
 
     def choose_hobbies(self, value):
-        self.hobby.element_by(have.exact_text(value)).click()
+        self.hobby.element_by(have.exact_text(value)).should(be.visible).perform(command.js.scroll_into_view).click()
         return self
 
     def upload_picture(self, value):

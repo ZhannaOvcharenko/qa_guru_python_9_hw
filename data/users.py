@@ -1,4 +1,5 @@
 import dataclasses
+import os
 from enum import Enum
 
 
@@ -33,7 +34,7 @@ class User:
     birth_day: str = '08'
     subject: str = 'Computer Science'
     hobbies: Hobby = Hobby.SPORTS
-    picture: str = 'demoqa.jpg'
+    picture: str = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'tests', 'demoqa.jpg'))
     address: str = 'St. Petersburg, Lomanosovskaya street'
     state: State = State.UTTAR_PRADESH
     city: str = 'Agra'

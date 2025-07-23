@@ -111,7 +111,7 @@ class RegistrationPage:
                 f'{user.birth_day} {user.birth_month},{user.birth_year}',
                 f'{user.subject}',
                 f'{user.hobbies.value}',
-                f'{user.picture}',
+                os.path.basename(user.picture),
                 f'{user.address}',
                 f'{user.state.value} {user.city}'
             )
